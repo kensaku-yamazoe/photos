@@ -1,0 +1,93 @@
+.title{
+  background-color: rgb(26, 26, 26);
+  height: 100px;
+  width: 100vw;
+  line-height: 100px;
+  text-align: center;
+  &-logo{
+    font-family: 'Pacifico', cursive;
+    font-size: 40px;
+    color: white;
+    // color: #bbb;
+    text-decoration-line: none;
+  }
+}
+
+
+.menu{
+  height: 100px;
+  width: 100vw;
+  background-color: rgb(63, 63, 63);
+  &-wrap{
+    display: flex;
+    float: right;
+    &-contents{
+      border: 1px solid #bbb;
+      border-radius: 5px;
+      margin: 30px 15px;
+      padding: 8px 15px;
+      text-decoration-line: none;
+      color: #bbb;
+      width: 100px;
+      text-align: center;
+      font-weight: 100;
+      font-family: 'Work Sans', sans-serif;
+    }
+    &-contents:hover{
+      background-color: #bbb;
+      color: rgb(63, 63, 63);
+    }
+    &-post{
+      border: 1px solid #bbb;
+      border-radius: 10px;
+      margin: 30px;
+      text-decoration-line: none;
+      background-color: #bbb;
+      &-content{
+        padding: 20px;
+        font-family: 'Courier New';
+        color: rgb(63, 63, 63);
+        text-decoration-line: none;
+      }
+    }
+    &-post:hover{
+      background-color: #99cc99;
+    }
+  }
+}
+
+
+
+.image-title{
+  height: 60px;
+  width: auto;
+  &-font{
+    height: 60px;
+    width: auto;
+  }
+}
+
+#logout-button{
+  background-color: rgb(63, 63, 63);
+  color: #f08080;
+  border: 1px solid #f08080;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+#logout-button:hover{
+  background-color: #f08080;
+  color: rgb(63, 63, 63);
+}
+
+#login-button{
+  background-color: rgb(63, 63, 63);
+  color: #48d1cc;
+  border: 1px solid #48d1cc;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+#login-button:hover{
+  background-color:#48d1cc;
+  color: rgb(63, 63, 63);
+}
+

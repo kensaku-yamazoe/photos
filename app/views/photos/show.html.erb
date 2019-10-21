@@ -1,0 +1,70 @@
+<header>
+</header>
+
+
+<body>
+
+<%# <%= image_tag "/assets/grain_1.jpg" , class: "grain_1"%> 
+
+<%= render partial:"header"%>
+
+<div class="main">
+  <div class="main-sidebar-left">
+  </div>
+  <%# <div class="main-list">
+  </div> %>
+  <div class="main-photo">
+
+    <%# 削除機能追加したい %>
+
+  <%# <% if user_signed_in? && current_user.id == photo.user_id %>
+    <%# <%= link_to '削除', "/tweets/#{photo.id}", method: :delete %>
+  <%# <% end %> 
+
+
+    <%# <div class="main-photo-photo1"> %>
+      <%= image_tag "#{@photos.image}", class:"main-photo-photo1"%>
+    <%# </div> %>
+
+
+
+    <%# <%= image_tag "/assets/IMG_1297.jpg" ,class:"main-photo-photo1" %> 
+
+    <div class="main-photo-wrap">
+      <%= image_tag "/assets/IMG_0082.jpg" ,class:"main-photo-wrap-photo2" %>
+      <%= image_tag "/assets/IMG_0330.jpg" ,class:"main-photo-wrap-photo2" %>
+      <%= image_tag "/assets/IMG_0720.jpg" ,class:"main-photo-wrap-photo2" %>
+
+
+
+      <div class="main-photo-wrap-photo2">
+      </div>
+    </div>
+
+    <div class="main-photo-wrap2">
+      <div class="main-photo-wrap2-column">
+        <div class="main-photo-wrap2-column-title"><span class="subject">　<i class="fas fa-file-alt"></i>　</span><%= @photos.title %></div>
+        <div class="main-photo-wrap2-column-subject"><span class="subject">　<i class="fas fa-grip-horizontal"></i>　</span><%= @genre[@photos.genre][0] %></div>
+        <div class="main-photo-wrap2-column-subject"><span class="subject">　<i class="fas fa-camera"></i></span>　<%= @camera[@photos.camera][0] %></div>
+        <div class="main-photo-wrap2-column-subject"><span class="subject">　<i class="fas fa-ring"></i></span>　<%= @lens[@photos.lens][0] %></div>
+        <div class="main-photo-wrap2-column-text"><%= @photos.text %></div>
+        <a class="main-photo-wrap2-column-like"><i class="fab fa-gratipay" id="like"></i>　like：200</a>
+      </div>
+      <div class="main-photo-wrap2-comment">
+        <p class="main-photo-wrap2-comment-me">綺麗に撮れました</p>
+        <p class="main-photo-wrap2-comment-you">それは良かったです</p>
+      </div>
+    </div>
+
+  </div>
+  
+</div>
+
+
+<%= render partial:"footer"%>
+</body>
+
+
+
+<footer>
+</footer>

@@ -1,0 +1,132 @@
+<%# ユーザーマイページ %>
+
+
+<%= render partial:"/photos/header"%>
+
+<div class="mypage">
+
+  <div class="mypage-user">
+    <%# <div class="mypage-user-image"> %>
+    <%= image_tag "/assets/user_sample.jpg" ,class:"mypage-user-image" %>
+      <a class="mypage-user-image-edit">
+        <i class="fas fa-edit" id="user-image-edit"></i>
+      </a>
+    <%# </div> %>
+
+    <% if user_signed_in? %>
+
+    <div class="mypage-user-detail">
+      <div class="mypage-user-detail-name">
+      username<br>
+      <%= current_user.name %>
+      </div>
+
+      <div class="mypage-user-detail-camera">
+      camera
+      </div>
+
+      <div class="mypage-user-detail-lens">
+      lens
+      </div>
+
+      <div class="mypage-user-detail-howto">
+      howto
+      </div>
+
+      <div class="mypage-user-detail-url">
+      http://www.rrrrrrrr.com
+      </div>
+
+    <% end %>
+
+    </div>
+    <i class="fas fa-edit" id="user-detail-edit"></i>
+
+
+
+  </div>
+
+
+  <div class="main-photo">
+    <div class="main-photo-index">
+    <%# <% @photo.each do |image|%> 
+      <%# <%= image_tag '#{photo.image}'%> 
+
+
+      <% if @images.present? %>
+
+      <% else %>
+
+        <div class="main-photo-index-sample">
+          <p class="main-photo-index-sample-text">ptotos<br><br>no image</p>
+        </div>
+
+      <% end %>
+
+      
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_1306-5.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_2131.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_3473.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_7820.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_7865.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_7899.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_7938.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_8014.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_8182.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_8399.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_9928.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_9974-2.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <%= link_to "/photos/:id" do%>
+      <%= image_tag "/assets/IMG_9995.jpg" ,class:"main-photo-index-photo2" %>
+      <%end%>
+
+      <div class="main-photo-index-photo2">
+      </div>
+      <div class="main-photo-index-photo2">
+      </div>
+      <div class="main-photo-index-photo2">
+      </div>
+    </div>
+  </div>
+  <%# <% end %> 
+
+  </div>
+
+</div>
+<%= render partial:"/photos/footer" %>

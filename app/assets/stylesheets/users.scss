@@ -1,0 +1,62 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.mypage{
+  height: 100%;
+  width: 100vw;
+  background-color: #999;
+  &-user{
+    height: 400px;
+    background-color: rgb(26, 26, 26);
+    position: relative;
+    &-image{
+      position: absolute;
+      height: 300px;
+      width: 300px;
+      background-color: white;
+      // opacity: 0.3;
+      margin: 50px 200px 50px 100px;
+      object-fit: cover;
+    }
+    &-detail{
+      position: absolute;
+      left: 40%;
+      margin: 50px 200px 50px 100px;
+      color: #bbb;
+      font-family: 'Work Sans', sans-serif;
+      &-name{
+        font-size: 18px;
+        margin: 10px 0;        
+      }
+      &-camera{
+        font-size: 18px;
+        margin: 10px 0;        
+      }
+      &-lens{
+        font-size: 18px;
+        margin: 10px 0;        
+      }
+      &-howto{
+        font-size: 18px;
+        margin: 10px 0;        
+      }
+    }
+  }
+}
+
+#user-image-edit{
+  position: absolute;
+  left: 120px;
+  top: 70px;
+  color: #bbb;
+  cursor: pointer;
+}
+
+#user-detail-edit{
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  color: #bbb; 
+}
+

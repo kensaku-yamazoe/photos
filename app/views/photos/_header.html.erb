@@ -1,0 +1,35 @@
+<div class="title">
+  <a href="/photos" class="title-logo"> photos </a>
+</div>
+
+
+<div class="menu">
+  <div class="menu-wrap">
+
+    <a href="" class="menu-wrap-contents"><i class="fas fa-grip-horizontal"></i>　genre</a>
+    
+      <a href="" class="menu-wrap-contents"><i class="fas fa-camera"></i>　camera</a>
+
+      <a href="" class="menu-wrap-contents"><i class="fas fa-ring"></i>　lens</a>
+
+      <a href="" class="menu-wrap-contents"><i class="fas fa-book-open"></i>　how to</a>
+
+  <% if user_signed_in? %>
+
+    <%= link_to "/users/#{current_user.id}", class:"menu-wrap-contents" do%> 
+      <i class="fas fa-user"></i>　mypage
+    <%end%>
+
+    <%= link_to "/photos/new", class:"menu-wrap-contents" ,id:"post-button" do%> 
+      <i class="fas fa-paper-plane"></i>　post
+    <%end%>
+
+    <%= link_to "log out", destroy_user_session_path, method: :delete, class:"menu-wrap-contents", id:"logout-button" %>
+
+  <% else %>
+
+    <%= link_to "log in",   new_user_session_path, class:"menu-wrap-contents", id:"login-button" %>
+  <% end %>
+
+  </div>
+</div>

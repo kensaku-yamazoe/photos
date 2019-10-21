@@ -1,0 +1,33 @@
+<div class="title">
+  <a href="/photos" class="title-logo"> photos </a>
+</div>
+
+
+<div class="signup">
+
+  <div class="signup-title">ログイン</div>
+
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <div class="field">
+    <%= f.label :メールアドレス %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", id:"field-title" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :パスワード %><br />
+    <%= f.password_field :password, autocomplete: "current-password", :id => "field-title"%>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "ログイン", id: "signup-button" %>
+  </div>
+<% end %>
+
+<%= render "users/shared/links" %>
+
+
+</div>
+
+<%= render partial:"photos/footer"%>

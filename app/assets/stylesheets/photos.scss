@@ -1,0 +1,181 @@
+// Place all the styles related to the photos controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+.main{
+  display: flex;
+  background-color: #999999;
+  width: 100%;
+  &-sidebar-left{
+    display: none;
+    width: 200px;
+    height: 100vh;
+    background-color: #bbb;
+  }
+  &-list{
+    width: 100px;
+    height: 100vh;
+    background-color: #eee;
+  }
+  &-photo{
+    position: relative;
+    overflow: scroll;
+    margin: 0 auto;
+    height: 100vh;
+    .grain_1{
+      width: 1000px;
+      height: auto;
+    }
+    &-photo1{
+      width: 800px;
+      height: 800px;
+      background-color: white;
+      // opacity: 0.2;
+      border-radius: 0px;
+      margin: 50px 100px 0 100px;
+      top: 0;
+      object-fit: scale-down;
+    }
+    &-index{
+      display: flex;
+      flex-wrap: wrap;
+      width: 750px;
+      margin: 100px auto;
+      &-photo2{
+        height: 200px;
+        width: 200px;
+        margin: 25px;
+        background-color: white;
+        object-fit: cover;
+        // opacity: 0.2;
+      }
+      &-photo2:hover{
+        // opacity: 0.8;
+        box-shadow: 0 0 2px yellow;
+      }
+      &-sample{
+        height: 200px;
+        width: 200px;
+        margin: 25px;
+        background-color: white;
+        text-align: center;
+        &-text{
+          font-size: 40px;
+          margin: 30px 0 0 0;
+          color: rgb(222, 222, 222);
+          font-family: 'Pacifico', cursive;
+          transform: rotateZ(15deg);
+        }
+      }
+
+    }
+    &-wrap{
+      display: flex;
+      margin: 50px 100px;
+      top: 495px;
+      &-photo2{
+        height: 200px;
+        width: 200px;
+        background-color: white;
+        // opacity: 0.2;
+      }
+    }
+    &-wrap2{
+      position: absolute;
+      &-column{
+        background-color: white;
+        width: 740px;
+        top: 745px;
+        margin: 0 100px;
+        padding: 30px;
+        color: rgb(63, 63, 63);
+        &-title{
+          font-size: 18px;
+          font-weight: 700px;
+          border-bottom: 2px solid rgb(215, 215, 215);
+          padding-bottom: 6px;
+        }
+        &-subject{
+          margin-top: 15px;
+          border-bottom: 2px solid rgb(215, 215, 215);
+          padding-bottom: 6px;
+        }
+        &-text{
+          margin-top: 15px;
+          padding-bottom: 6px;
+        }
+        &-like{
+          position: absolute;
+          right: 150px;
+          top: 30px;
+        }
+      }
+      &-comment{
+        margin: 50px 0 ;
+        &-me{
+          position: relative;
+          padding: 20px;
+          background-color: white;
+          border-radius: 10px;
+          margin: 20px auto 0 auto;
+          max-width: 40%;
+        }
+        &-me::before{
+          content: '';
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          right: -15px;
+          top: 20px;
+          border-left: 15px solid white;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+        }
+        &-you{
+          position: relative;
+          padding: 20px;
+          background-color: white;
+          border-radius: 10px;
+          margin: 20px auto 0 auto;
+          max-width: 40%;
+        }
+        &-you::before{
+          content: '';
+          position: absolute;
+          display: block;
+          width: 0;
+          height: 0;
+          left: -15px;
+          top: 20px;
+          border-right: 15px solid white;
+          border-top: 15px solid transparent;
+          border-bottom: 15px solid transparent;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+.footer{
+  height: 150px;
+  width: 100vw;
+  background-color: rgb(63, 63, 63);
+}
+
+#like{
+  color: #999999;
+  font-size: 1.0rem;
+}
+
+.subject{
+  color: #999999;
+}
+
+

@@ -1,0 +1,85 @@
+.signup{
+  height: 60vh;
+  width: 400px;
+  margin: 100px auto;
+  &-title{
+  margin: 100px 0 30px 0;
+  font-size: 24px;
+  font-weight: 300px;
+  text-align: center;
+  }
+
+  .field{
+    margin-top: 15px;
+
+  }
+
+  .actions{
+    margin: 30px 0;
+
+  }
+}
+
+#user_email{
+  height: 30px;
+  width: 335px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+#user_password{
+  height: 30px;
+  width: 335px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+#user_password_confirmation{
+  height: 30px;
+  width: 335px;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+#devise{
+  text-decoration: none;
+  font-variant-caps: #999;
+}
+
+
+#post-button{
+  background-color: rgb(63, 63, 63);
+  color: #daa520;
+  border: 1px solid #daa520;
+}
+#post-button:hover{
+  background-color: #daa520;
+  color: rgb(63, 63, 63);
+}
+
+#signup-button{
+  height: 50px;
+  width: 400px;
+  color: #48d1cc;
+  border: 2px solid #48d1cc;
+  border-radius: 4px;
+  font-size: 15px;
+}
+#signup-button:hover{
+  background-color: #48d1cc;
+  color: white;
+}
+
+#devise-signup{
+  position: absolute;
+  padding: 6px 174px;
+  color: #f08080;
+  border: 2px solid #f08080;
+  border-radius: 4px;
+  font-size: 12px;
+  text-decoration-line: none;
+}
+#devise-signup:hover{
+  background-color: #f08080;
+  color: white;
+}

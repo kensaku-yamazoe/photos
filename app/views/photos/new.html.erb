@@ -1,0 +1,60 @@
+<%= render partial:"header"%>
+
+
+<div class="main">
+  <div class="photo-new">
+  <%= form_with model:@photo, url: photos_path, local: true do |f| %>
+    <p class="photo-new-p">新規投稿</p>
+
+    <div class="photo-new-select">
+      <p class="photo-new-select-p">写真を選ぶ</p>
+      <div class="photo-new-select-p2">※4枚までアップロードできます</div>
+      <div class="photo-new-select-image-drop">
+      <%# <%= f.fields_for :photos do |image| %> 
+        <div class=photo-new-select-file-label>
+          <%# <%= image.file_field :image, id: "files"  複数枚保存するならいるかも%> 
+          <%= f.file_field :image,  id: "files"  %>
+          <%# <%= image.hidden_field :id, value: image.object.idよくわからんけど置いてます %>
+        </div>
+      <%# <% end %> 
+      <div class="photo-new-select-image-filter">
+        <output class="photo-new-select-image-out"></output>
+      </div>
+    </div>
+    <%# <h4 class="error-text">画像がありません</h4> %>
+
+
+
+
+    </div>
+
+    <div class="photo-new-title">
+      <p>タイトル</p>
+      <%= f.text_field :title, :placeholder => "タイトル", :id => "field-title" %>
+    </div>
+
+    <div class="photo-new-genre">
+      <p>ジャンル</p>
+      <%= f.select :genre,[['',0], ['ポートレート', 1], ['風景', 2],['動物', 3],['植物、花', 4],['スナップ', 5],['料理', 6],['テーブルフォト', 7]] %> 
+    </div>
+
+    <div class="photo-new-camera">
+    <p>カメラ</p>
+      <%= f.select :camera,[['',0],['canon',1], ['nikon', 2], ['sony', 3],['fujifilm', 4],['pentax', 5],['スマホ', 6],['その他', 7]] %> 
+    </div>
+
+    <div class="photo-new-lens">
+    <p>焦点距離</p>
+      <%= f.select :lens,[['',0],['超広角',1], ['広角', 2], ['標準', 3],['中望遠', 4],['望遠', 5],['その他', 6]] %>
+    </div>
+
+    <div class="photo-new-comment">
+      <p>コメント</p>
+      <%= f.text_area :text, :placeholder => "コメント", :id => "field-comment" %>
+    </div>
+
+    <%= f.submit "投稿する", :id => "new-post" %>
+
+  <% end %>
+
+  </div>
