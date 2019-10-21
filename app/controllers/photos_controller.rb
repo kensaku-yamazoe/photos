@@ -14,11 +14,14 @@ class PhotosController < ApplicationController
 
   def new
     @photo = Photo.new
+    @photo.images.build
   end
 
   def create
     # binding.pry
     @photo = Photo.new(photo_params)
+    # @photo.images.build
+
     if @photo.save
       redirect_to '/photos'
     else
@@ -28,7 +31,7 @@ class PhotosController < ApplicationController
 
   private
   def photo_params
-    params.require(:photo).permit(:image, :title, :text , :genre, :camera, :lens).merge(user_id: current_user.id)
+    params.require(:photo).permit(:title, :text , :genre, :camera, :lens, images_attributes: [:id, :image], ).merge(user_id: current_user.id)
   end
 
   def move_to_index

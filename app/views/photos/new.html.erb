@@ -9,22 +9,23 @@
     <div class="photo-new-select">
       <p class="photo-new-select-p">写真を選ぶ</p>
       <div class="photo-new-select-p2">※4枚までアップロードできます</div>
-      <div class="photo-new-select-image-drop">
-      <%# <%= f.fields_for :photos do |image| %> 
-        <div class=photo-new-select-file-label>
-          <%# <%= image.file_field :image, id: "files"  複数枚保存するならいるかも%> 
-          <%= f.file_field :image,  id: "files"  %>
-          <%# <%= image.hidden_field :id, value: image.object.idよくわからんけど置いてます %>
+        <div class="photo-new-select-image-drop">
+
+        <%# 複数写真のアップロード %>
+        <%= f.fields_for :images do |image| %>
+          <div class=photo-new-select-file-label>
+            <%# 複数枚保存するならいるかも  %>
+            <%= image.file_field :image, id: "files"%>
+            <%# よくわからんけど置いてます %>
+            <%= image.hidden_field :id, value: image.object.id %>
+          </div>
+        <% end %>
+
+        <div class="photo-new-select-image-filter">
+          <output class="photo-new-select-image-out"></output>
         </div>
-      <%# <% end %> 
-      <div class="photo-new-select-image-filter">
-        <output class="photo-new-select-image-out"></output>
       </div>
-    </div>
     <%# <h4 class="error-text">画像がありません</h4> %>
-
-
-
 
     </div>
 
