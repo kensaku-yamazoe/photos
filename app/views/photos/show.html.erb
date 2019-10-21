@@ -23,7 +23,7 @@
 
 
     <%# <div class="main-photo-photo1"> %>
-      <%= image_tag "#{@photos.image}", class:"main-photo-photo1"%>
+      <%= image_tag "#{@photos.images[0].image}", class:"main-photo-photo1"%>
     <%# </div> %>
 
 
@@ -47,7 +47,14 @@
         <div class="main-photo-wrap2-column-subject"><span class="subject">　<i class="fas fa-grip-horizontal"></i>　</span><%= @genre[@photos.genre][0] %></div>
         <div class="main-photo-wrap2-column-subject"><span class="subject">　<i class="fas fa-camera"></i></span>　<%= @camera[@photos.camera][0] %></div>
         <div class="main-photo-wrap2-column-subject"><span class="subject">　<i class="fas fa-ring"></i></span>　<%= @lens[@photos.lens][0] %></div>
-        <div class="main-photo-wrap2-column-text"><%= @photos.text %></div>
+
+        <% if @photos.text.present? %>
+          <div class="main-photo-wrap2-column-text">　<%= @photos.text %></div>
+        <% else %>
+          <div class="main-photo-wrap2-column-text">　コメントはありません</div>
+        <% end %>
+
+
         <a class="main-photo-wrap2-column-like"><i class="fab fa-gratipay" id="like"></i>　like：200</a>
       </div>
       <div class="main-photo-wrap2-comment">
