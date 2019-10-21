@@ -8,7 +8,11 @@
 
     <div class="main-photo-index">
 
-
+    <% @photos.each do |photo|%>
+      <%= link_to "/photos/#{photo.id}" do%>
+        <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+      <%end%>
+    <% end %>
 
     </div>
 

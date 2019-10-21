@@ -1,7 +1,7 @@
 class PhotosController < ApplicationController
 
   def index
-    # @photos = Photo.all.order(id: "DESC")
+    @photos = Photo.all.order(id: "DESC")
   end
   
   def show
