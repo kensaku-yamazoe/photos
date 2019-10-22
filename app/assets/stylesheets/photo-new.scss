@@ -82,3 +82,14 @@ select{
   background-color: #48d1cc;
   color: white;
 }
+
+
+.img_prev{
+  display: flex;
+  &-1{
+    margin: 10px 2px 0 0 ;
+    height: 98px;
+    width: 98px;
+    background: wheat;
+  }
+}

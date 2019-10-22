@@ -26,14 +26,15 @@
       <%= image_tag "#{@photos.images[0].image}", class:"main-photo-photo1"%>
     <%# </div> %>
 
-
-
     <%# <%= image_tag "/assets/IMG_1297.jpg" ,class:"main-photo-photo1" %> 
 
     <div class="main-photo-wrap">
-      <%= image_tag "/assets/IMG_0082.jpg" ,class:"main-photo-wrap-photo2" %>
-      <%= image_tag "/assets/IMG_0330.jpg" ,class:"main-photo-wrap-photo2" %>
-      <%= image_tag "/assets/IMG_0720.jpg" ,class:"main-photo-wrap-photo2" %>
+    <% @images.each do |images| %>
+      <%= image_tag "#{images.image.url}" ,class:"main-photo-wrap-photo2" %>
+    <% end %>
+      <%# <%= image_tag "/assets/IMG_0082.jpg" ,class:"main-photo-wrap-photo2" %> 
+      <%# <%= image_tag "/assets/IMG_0330.jpg" ,class:"main-photo-wrap-photo2" %> 
+      <%# <%= image_tag "/assets/IMG_0720.jpg" ,class:"main-photo-wrap-photo2" %> 
 
 
 
