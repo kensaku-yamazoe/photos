@@ -15,9 +15,16 @@
         <%= f.fields_for :images do |image| %>
           <div class=photo-new-select-file-label>
             <%# 複数枚保存するならいるかも  %>
-            <%= image.file_field :image, id: "files"%>
+
+            <%= image.file_field :image, id: :image_field %>
+            <div class= "img_prev">
+              <div class= "img_prev-1"></div> 
+              <div class= "img_prev-1"></div>
+              <div class= "img_prev-1"></div>
+            </div>
+
+            <%# <%= image.file_field :image, id: "files"%>
             <%# よくわからんけど置いてます %>
-            <%= image.hidden_field :id, value: image.object.id %>
           </div>
         <% end %>
 
