@@ -6,14 +6,8 @@
 <div class="mypage">
 
   <div class="mypage-user">
-    <%# <div class="mypage-user-image"> %>
-    <%= image_tag "/assets/user_sample.jpg" ,class:"mypage-user-image" %>
-      <a class="mypage-user-image-edit">
-        <i class="fas fa-edit" id="user-image-edit"></i>
-      </a>
-    <%# </div> %>
-
     <% if user_signed_in? %>
+    <%= image_tag "#{current_user.image}" ,class:"mypage-user-image" %>
 
     <div class="mypage-user-detail">
       <div class="mypage-user-detail-name">
@@ -40,7 +34,10 @@
     <% end %>
 
     </div>
+
+    <%= link_to "/users/#{current_user.id}/edit" do%>
     <i class="fas fa-edit" id="user-detail-edit"></i>
+    <% end %>
 
 
 

@@ -17,6 +17,6 @@ Rails.application.routes.draw do
   root to: 'photos#index'
   resources :photos, only:[:index,:show,:new,:create]
 
-  resources :users, only: [:show, :destroy, :update] 
+  resources :users, only: [:show, :destroy, :edit, :update] 
 
 end

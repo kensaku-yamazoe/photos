@@ -1,0 +1,34 @@
+<%= render partial:"/photos/header"%>
+
+<div class="main">
+  <div class="edit">
+<%# model: @user, url: user_registration_path, method: :patch, local: true %>
+  <%= form_with  model: current_user, local: true do |f| %>
+
+    <div class="field">
+      <%= f.label :name, "　なまえ" %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name" , id: "field-title" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :image, "　プロフィール写真" %>
+      <br>
+      <br>
+      <%= f.file_field :image, id: "avatar" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email, "　メールアドレス" %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" ,id: "field-title" %>
+    </div>
+
+    <%= f.submit "更新する", :id => "edit_user" %>
+
+
+  <% end %>
+  </div>
+
+
+</div>
+
+<%= render partial:"/photos/footer" %>

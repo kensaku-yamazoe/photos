@@ -10,9 +10,16 @@
     <%= render "devise/shared/error_messages", resource: resource %>
 
     <div class="field">
-        <%= f.label :　なまえ %>
-        <%= f.text_field :name, autofocus: true, autocomplete: "name" ,id: "field-title" %>
-      </div>
+      <%= f.label :　なまえ %>
+      <%= f.text_field :name, autofocus: true, autocomplete: "name" , id: "field-title" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :　プロフィール写真 %>
+      <br>
+      <br>
+      <%= f.file_field :image, id: "avatar" %>
+    </div>
 
     <div class="field">
       <%= f.label :　メールアドレス %><br />

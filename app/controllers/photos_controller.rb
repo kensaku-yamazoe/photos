@@ -16,7 +16,6 @@ class PhotosController < ApplicationController
   def new
     @photo = Photo.new
     @photo.images.build
-
   end
 
   def create
