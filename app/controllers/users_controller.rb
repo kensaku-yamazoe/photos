@@ -1,13 +1,15 @@
 class UsersController < ApplicationController
 
   def show
-    # @photos= Photo.all
+    @camera = [['未分類',0],['canon',1], ['nikon', 2], ['sony', 3],['fujifilm', 4],['pentax', 5],['スマホ', 6],['その他', 7]]
+    @lens = [['未分類',0],['~14mm　超広角',1], ['16~28mm　[広角]', 2], ['35~60mm　[標準]', 3],['80~100mm　[中望遠]', 4],['100mm~　[望遠]', 5],['その他', 6]]
 
     @user = User.find(current_user.id)
-    # @photos = @user.image
-    # binding.pry
-    @photos = Photo.find_by(params[:user_id])
 
+    # 他のユーザーの詳細ページが観れる
+    @photos = Photo.where(["user_id = ?", params[:id]])
+    # 自分の写真の耳れる
+    @photos = Photo.where(["user_id = ?", current_user.id])
   end
 
   def edit
@@ -26,9 +28,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-
     params.require(:user).permit(:name, :image, :email, :camera, :lens, :url)
-    
-    end
+  end
 
 end

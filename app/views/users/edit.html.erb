@@ -3,10 +3,11 @@
 <div class="main">
   <div class="edit">
 <%# model: @user, url: user_registration_path, method: :patch, local: true %>
-  <%= form_with  model: current_user, local: true do |f| %>
+  <div class="edit_detail">ユーザー情報編集</div>
 
+  <%= form_with  model: current_user, local: true do |f| %>
     <div class="field">
-      <%= f.label :name, "　なまえ" %>
+      <%= f.label :name, "　なまえ" %><br>
       <%= f.text_field :name, autofocus: true, autocomplete: "name" , id: "field-title" %>
     </div>
 
@@ -18,11 +19,27 @@
     </div>
 
     <div class="field">
+      <%= f.label :camera, "　主な使用カメラ" %><br>
+      <%= f.select :camera,[['',0],['canon',1], ['nikon', 2], ['sony', 3],['fujifilm', 4],['pentax', 5],['スマホ', 6],['その他', 7]] %> 
+    </div>
+
+    <div class="field">
+      <%= f.label :lens, "　主な使用レンズ" %><br>
+      <%= f.select :lens,[['',0],['超広角',1], ['広角', 2], ['標準', 3],['中望遠', 4],['望遠', 5],['その他', 6]] %>
+    </div>
+
+    <div class="field">
+      <%= f.label :url, "　あなたのHOWTOサイト" %><br>
+      <%= f.text_field :url, autofocus: true, autocomplete: "url" , id: "field-title" %>
+    </div>
+
+
+    <div class="field">
       <%= f.label :email, "　メールアドレス" %><br />
       <%= f.email_field :email, autofocus: true, autocomplete: "email" ,id: "field-title" %>
     </div>
 
-    <%= f.submit "更新する", :id => "edit_user" %>
+    <%= f.submit "更新する", id: "edit_user" %>
 
 
   <% end %>

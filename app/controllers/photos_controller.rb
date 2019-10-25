@@ -3,6 +3,18 @@ class PhotosController < ApplicationController
   def index
     @photos = Photo.all.order(id: "DESC")
   end
+
+  def genre
+  end
+
+  def camera
+  end
+
+  def lens
+  end
+
+  def howto
+  end
   
   def show
     @genre = [['未分類',0], ['ポートレート', 1], ['風景', 2],['動物', 3],['植物、花', 4],['スナップ', 5],['料理', 6],['テーブルフォト', 7]]

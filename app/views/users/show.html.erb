@@ -16,19 +16,18 @@
       </div>
 
       <div class="mypage-user-detail-camera">
-      camera
+      camera<br>
+      <%= current_user.camera %>
       </div>
 
       <div class="mypage-user-detail-lens">
-      lens
+      lens<br>
+      <%= current_user.lens %>
       </div>
 
       <div class="mypage-user-detail-howto">
-      howto
-      </div>
-
-      <div class="mypage-user-detail-url">
-      http://www.rrrrrrrr.com
+      howto<br>
+      <%= link_to "#{current_user.url}" %>
       </div>
 
     <% end %>
@@ -46,79 +45,21 @@
 
   <div class="main-photo">
     <div class="main-photo-index">
-    <%# <% @photo.each do |image|%> 
-      <%# <%= image_tag '#{photo.image}'%> 
 
-
-      <% if @images.present? %>
-
+    <% @photos.each do |photo|%> 
+      <% if photo.present? %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%> 
+        <% end %>
       <% else %>
-
         <div class="main-photo-index-sample">
           <p class="main-photo-index-sample-text">ptotos<br><br>no image</p>
         </div>
-
       <% end %>
 
+    <% end %>
+
       
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_1306-5.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_2131.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_3473.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_7820.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_7865.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_7899.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_7938.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_8014.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_8182.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_8399.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_9928.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_9974-2.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <%= link_to "/photos/:id" do%>
-      <%= image_tag "/assets/IMG_9995.jpg" ,class:"main-photo-index-photo2" %>
-      <%end%>
-
-      <div class="main-photo-index-photo2">
-      </div>
-      <div class="main-photo-index-photo2">
-      </div>
-      <div class="main-photo-index-photo2">
-      </div>
     </div>
   </div>
   <%# <% end %> 

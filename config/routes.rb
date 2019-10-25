@@ -15,7 +15,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root to: 'photos#index'
-  resources :photos, only:[:index,:show,:new,:create]
+  resources :photos, only:[:index,:show,:new,:create] do
+    collection do
+      get :genre
+      get :camera
+      get :lens
+      get :howto
+    end
+  end
 
   resources :users, only: [:show, :destroy, :edit, :update] 
 
