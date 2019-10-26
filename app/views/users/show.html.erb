@@ -17,12 +17,12 @@
 
       <div class="mypage-user-detail-camera">
       camera<br>
-      <%= current_user.camera %>
+      <%= @camera[current_user.camera][0] %>
       </div>
 
       <div class="mypage-user-detail-lens">
       lens<br>
-      <%= current_user.lens %>
+      <%= @lens[current_user.lens][0] %>
       </div>
 
       <div class="mypage-user-detail-howto">
