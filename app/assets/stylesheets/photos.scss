@@ -29,6 +29,20 @@
       width: 1000px;
       height: auto;
     }
+    &-user{
+      margin: 80px 100px 0 100px;
+      text-align: center;
+      &-name{
+        color: #eee;
+        font-size: 18px;
+        margin-top: 20px;
+      }
+      #main-photo-user-image{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+      }
+    }
     &-photo1{
       width: 800px;
       height: 800px;
@@ -161,6 +175,54 @@
   }
 }
 
+.camera-header{
+  display: flex;
+  background-color: #eee;
+  &-tab{
+    color:  #bbb;
+    height: 40px;
+    width: 120px;
+    line-height: 40px;
+    border: 1px solid  #bbb;
+    border-radius: 4px;
+    text-align: center;
+    margin: 50px auto;
+  }
+  &-tab:hover{
+    color: #eee;
+    border: 1px solid #eee;
+    background-color:  #bbb;
+  }
+}
+
+.camera-main{
+  text-align: center;
+  margin: 50px auto;
+  &-index{
+    height: 50px;
+    width: 300px;
+    line-height: 50px;
+    color: #eee;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    margin-bottom: 50px;
+    &-canon{
+      width: 750px;
+      &-image{
+        height: 200px;
+        width: 200px;
+        margin: 25px;
+        background-color: white;
+        object-fit: cover;
+        // opacity: 0.2;
+      }
+      &-image:hover{
+        // opacity: 0.8;
+        box-shadow: 0 0 2px yellow;
+      }
+    }
+  }
+}
 
 
 

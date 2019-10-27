@@ -1,37 +1,75 @@
 <%= render partial:"header"%>
-<div class="main">
 
   <div class="camera-header">
-
+  <%# idはJS発火用 %>
     <div class="camera-header-tab" id="camera-canon">
-      <span class="camera-header-tab-text">canon</span>
+      <span class="camera-header-tab-text"><i class="fas fa-camera"></i>　canon</span>
     </div>
 
     <div class="camera-header-tab" id="camera-nikon">
-      <span class="camera-header-tab-text">nikon</span>
+      <span class="camera-header-tab-text"><i class="fas fa-camera"></i>　nikon</span>
     </div>
 
     <div class="camera-header-tab" id="camera-sony">
-      <span class="camera-header-tab-text">sony</span>
+      <span class="camera-header-tab-text"><i class="fas fa-camera"></i>　sony</span>
     </div>
 
     <div class="camera-header-tab" id="camera-fujifilm">
-      <span class="camera-header-tab-text">fujifilm</span>
+      <span class="camera-header-tab-text"><i class="fas fa-camera"></i>　fujifilm</span>
     </div>
 
     <div class="camera-header-tab" id="camera-pentax">
-      <span class="camera-header-tab-text">pentax</span>
+      <span class="camera-header-tab-text"><i class="fas fa-camera"></i>　pentax</span>
     </div>
 
     <div class="camera-header-tab" id="camera-smartphone">
-      <span class="camera-header-tab-text">スマホ</span>
+      <span class="camera-header-tab-text"><i class="fas fa-camera"></i>　スマホ</span>
     </div>
 
     <div class="camera-header-tab" id="camera-ext">
-      <span class="camera-header-tab-text">ext</span>
+      <span class="camera-header-tab-text"><i class="fas fa-camera"></i>　その他</span>
+    </div>
+  </div>
+
+
+<div class="main">
+
+  <div class="camera-main">
+    <div class="camera-main-index">
+      <div class="camera-main-index-canon">canonでの作例</div>
+      <% @canon.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"camera-main-index-canon-image"%>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="camera-main-index">
+      <span class="camera-main-index-nikon">nikonでの作例</span>
+    </div>
+
+    <div class="camera-main-index">
+      <span class="camera-main-index-sony">sonyでの作例</span>
+    </div>
+
+    <div class="camera-main-index">
+      <span class="camera-main-index-fujifilm">fujifilmでの作例</span>
+    </div>
+
+    <div class="camera-main-index">
+      <span class="camera-main-index-pentax">pentaxでの作例</span>
+    </div>
+
+    <div class="camera-main-index">
+      <span class="camera-main-index-smartphone">スマホでの作例</span>
+    </div>
+
+    <div class="camera-main-index">
+      <span class="camera-main-index-ext">その他での作例</span>
     </div>
 
   </div>
-
 </div>
+
+
 <%= render partial:"footer"%>
