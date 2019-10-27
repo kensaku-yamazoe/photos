@@ -8,6 +8,13 @@ class PhotosController < ApplicationController
   end
 
   def camera
+    @canon = Photo.where(camera: "1")
+    @nikon = Photo.where(camera: "2")
+    @sony = Photo.where(camera: "3")
+    @fujifilm = Photo.where(camera: "4")
+    @pentax = Photo.where(camera: "5")
+    @smartphone = Photo.where(camera: "6")
+    @ext = Photo.where(camera: "7")
   end
 
   def lens
@@ -23,6 +30,9 @@ class PhotosController < ApplicationController
 
     @photos = Photo.find(params[:id])
     @images = @photos.images
+    
+    # photosテーブルのユーザーの表示
+    @user = User.find_by(id: @photos.user_id)
   end
 
   def new
@@ -31,9 +41,7 @@ class PhotosController < ApplicationController
   end
 
   def create
-    # binding.pry
     @photo = Photo.new(photo_params)
-    # @photo.images.build
 
     if @photo.save
       redirect_to '/photos'
