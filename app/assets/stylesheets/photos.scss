@@ -201,9 +201,29 @@
       }
     }
   }
+  &-lens{
+    text-align: center;
+    margin: 50px auto;
+    &-index{
+      margin: 50px 0;
+      line-height: 50px;
+      &-text{
+        padding: 20px 300px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        color: #eee;
+        text-decoration: none;
+      }
+      &-text:hover{
+        color: #999;
+        background-color: #eee;
+        border: 1px solid #999;
+      }
+    }
+  }
 }
 
-.camera-header{
+.menu-header{
   display: flex;
   background-color: #eee;
   &-tab{

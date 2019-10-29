@@ -18,6 +18,12 @@ class PhotosController < ApplicationController
   end
 
   def lens
+    @hyperwide = Photo.where(lens: "1").order(id: "DESC").limit(9)
+    @wide = Photo.where(lens: "2").order(id: "DESC").limit(9)
+    @nomal = Photo.where(lens: "3").order(id: "DESC").limit(9)
+    @semitele = Photo.where(lens: "4").order(id: "DESC").limit(9)
+    @tele = Photo.where(lens: "5").order(id: "DESC").limit(9)
+    @ext = Photo.where(lens: "6").order(id: "DESC").limit(9)
   end
 
   def howto

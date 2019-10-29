@@ -1,36 +1,112 @@
 <%= render partial:"header"%>
 
-<div class="making">すいません<br>製作中です</div>
 
-<div class="main">
+<div class="menu-header">
 
-  <div class="lens-header">
+  <div class="menu-header-tab" id="lens-hyperwide">
+    <span class="menu-header-tab-text">魚眼、超広角</span>
+  </div>
 
-    <div class="lens-header-tab" id="lens-hyperwide">
-      <span class="lens-header-tab-text">~14mm　魚眼、超広角</span>
-    </div>
+  <div class="menu-header-tab" id="lens-wide">
+    <span class="menu-header-tab-text">広角</span>
+  </div>
 
-    <div class="lens-header-tab" id="lens-wide">
-      <span class="lens-header-tab-text">16~28mm　広角</span>
-    </div>
+  <div class="menu-header-tab" id="lens-nomal">
+    <span class="menu-header-tab-text">標準</span>
+  </div>
 
-    <div class="lens-header-tab" id="lens-nomal">
-      <span class="lens-header-tab-text">35~60mm　標準</span>
-    </div>
+  <div class="menu-header-tab" id="lens-semitele">
+    <span class="menu-header-tab-text">中望遠</span>
+  </div>
 
-    <div class="lens-header-tab" id="lens-semitele">
-      <span class="lens-header-tab-text">80~100mm　中望遠</span>
-    </div>
+  <div class="menu-header-tab" id="lens-tele">
+    <span class="menu-header-tab-text">望遠</span>
+  </div>
 
-    <div class="lens-header-tab" id="lens-tele">
-      <span class="lens-header-tab-text">100mm~　望遠</span>
-    </div>
-
-    <div class="lens-header-tab" id="lens-ext">
-      <span class="lens-header-tab-text">ext</span>
-    </div>
-
+  <div class="menu-header-tab" id="lens-ext">
+    <span class="menu-header-tab-text">その他</span>
   </div>
 
 </div>
+
+
+
+<div class="main">
+  <div class="main-lens">
+
+    <div class="main-lens-index">
+      <%= link_to "", class:"main-lens-index-text" do %>
+      <i class="fas fa-ring"></i>　[~14mm]　魚眼、超広角レンズでの作例
+      <% end %>
+    </div>
+      <% @hyperwide.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
+
+
+    <div class="main-lens-index">
+      <%= link_to "", class:"main-lens-index-text" do %>
+      <i class="fas fa-ring"></i>　[16~28mm]　広角レンズでの作例
+      <% end %>
+    </div>
+      <% @wide.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
+
+
+    <div class="main-lens-index">
+      <%= link_to "", class:"main-lens-index-text" do %>
+      <i class="fas fa-ring"></i>　[35~60mm]　標準レンズでの作例
+      <% end %>
+    </div>
+      <% @nomal.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
+
+
+
+    <div class="main-lens-index">
+      <%= link_to "", class:"main-lens-index-text" do %>
+      <i class="fas fa-ring"></i>　[80~100mm]　中望遠レンズでの作例
+      <% end %>
+    </div>
+      <% @semitele.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
+
+
+    <div class="main-lens-index">
+      <%= link_to "", class:"main-lens-index-text" do %>
+      <i class="fas fa-ring"></i>　[100mm~]　望遠レンズでの作例
+      <% end %>
+    </div>
+      <% @tele.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
+
+
+    <div class="main-lens-index">
+      <%= link_to "", class:"main-lens-index-text" do %>
+      <i class="fas fa-ring"></i>　その他での作例
+      <% end %>
+    </div>
+      <% @ext.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
+
+  </div>
+</div>
+
 <%= render partial:"footer"%>
