@@ -15,9 +15,10 @@
   </div> %>
   <div class="main-photo">
     <div class="main-photo-user">
-      <%= link_to "users/#{@user.id}" do %>
+
+      <%# <%= link_to "users/#{@user.id}" do %>
         <%= image_tag "#{@user.image}", id:"main-photo-user-image" %>
-      <% end %>
+        <%# <%end%> 
       <div class="main-photo-user-name">
         <%= "投稿者　　#{@user.name}　さん" %>
       </div>
