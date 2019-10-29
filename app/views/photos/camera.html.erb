@@ -1,6 +1,6 @@
 <%= render partial:"header"%>
 
-<div class="making">すいません<br>製作中です</div>
+<%# <div class="making">すいません<br>製作中です</div> %>
 
   <div class="camera-header">
   <%# idはJS発火用 %>
@@ -36,39 +36,86 @@
 
 <div class="main">
 
-  <div class="camera-main">
-    <div class="camera-main-index">
-      <div class="camera-main-index-canon">canonでの作例</div>
+  <div class="main-camera">
+    <div class="main-camera-index">
+    
+      <%= link_to "photos/canon", class:"main-camera-index-text" do %>
+      canonでの作例
+      <% end %>
+
+    </div>
       <% @canon.each do |photo| %>
         <%= link_to "/photos/#{photo.id}" do%>
-          <%= image_tag "#{photo.images[0].image}", class:"camera-main-index-canon-image"%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
-    </div>
 
-    <div class="camera-main-index">
-      <span class="camera-main-index-nikon">nikonでの作例</span>
+    <div class="main-camera-index">
+      <%= link_to "photos/nikon", class:"main-camera-index-text" do %>
+      nikonでの作例
+      <% end %>
     </div>
+      <% @nikon.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
 
-    <div class="camera-main-index">
-      <span class="camera-main-index-sony">sonyでの作例</span>
+    <div class="main-camera-index">
+      <%= link_to "photos/sony", class:"main-camera-index-text" do %>
+      sonyでの作例
+      <% end %>
     </div>
+      <% @sony.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
 
-    <div class="camera-main-index">
-      <span class="camera-main-index-fujifilm">fujifilmでの作例</span>
+    <div class="main-camera-index">
+      <%= link_to "photos/fujifilm", class:"main-camera-index-text" do %>
+      fujifilmでの作例
+      <% end %>
     </div>
+      <% @fujifilm.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
 
-    <div class="camera-main-index">
-      <span class="camera-main-index-pentax">pentaxでの作例</span>
+    <div class="main-camera-index">
+      <%= link_to "photos/pentax", class:"main-camera-index-text" do %>
+      pentaxでの作例
+      <% end %>
     </div>
+      <% @pentax.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
 
-    <div class="camera-main-index">
-      <span class="camera-main-index-smartphone">スマホでの作例</span>
+    <div class="main-camera-index">
+      <%= link_to "photos/smartphone", class:"main-camera-index-text" do %>
+      スマホでの作例
+      <% end %>
     </div>
+      <% @smartphone.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
 
-    <div class="camera-main-index">
-      <span class="camera-main-index-ext">その他での作例</span>
+    <div class="main-camera-index">
+      <%= link_to "photos/ext", class:"main-camera-index-text" do %>
+      その他カメラでの作例
+      <% end %>
     </div>
+      <% @ext.each do |photo| %>
+        <%= link_to "/photos/#{photo.id}" do%>
+          <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
+        <% end %>
+      <% end %>
+
 
   </div>
 </div>

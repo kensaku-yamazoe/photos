@@ -181,6 +181,26 @@
       }
     }
   }
+  &-camera{
+    text-align: center;
+    margin: 50px auto;
+    &-index{
+      margin: 50px 0;
+      line-height: 50px;
+      &-text{
+        padding: 20px 300px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+        color: #eee;
+        text-decoration: none;
+      }
+      &-text:hover{
+        color: #999;
+        background-color: #eee;
+        border: 1px solid #999;
+      }
+    }
+  }
 }
 
 .camera-header{
@@ -200,35 +220,6 @@
     color: #eee;
     border: 1px solid #eee;
     background-color:  #bbb;
-  }
-}
-
-.camera-main{
-  text-align: center;
-  margin: 50px auto;
-  &-index{
-    height: 50px;
-    width: 300px;
-    line-height: 50px;
-    color: #eee;
-    border: 1px solid #eee;
-    border-radius: 4px;
-    margin-bottom: 50px;
-    &-canon{
-      width: 750px;
-      &-image{
-        height: 200px;
-        width: 200px;
-        margin: 25px;
-        background-color: white;
-        object-fit: cover;
-        // opacity: 0.2;
-      }
-      &-image:hover{
-        // opacity: 0.8;
-        box-shadow: 0 0 2px yellow;
-      }
-    }
   }
 }
 
