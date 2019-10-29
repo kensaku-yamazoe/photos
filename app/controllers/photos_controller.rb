@@ -8,22 +8,22 @@ class PhotosController < ApplicationController
   end
 
   def camera
-    @canon = Photo.where(camera: "1").order(id: "DESC").limit(9)
-    @nikon = Photo.where(camera: "2").order(id: "DESC").limit(9)
-    @sony = Photo.where(camera: "3").order(id: "DESC").limit(9)
-    @fujifilm = Photo.where(camera: "4").order(id: "DESC").limit(9)
-    @pentax = Photo.where(camera: "5").order(id: "DESC").limit(9)
-    @smartphone = Photo.where(camera: "6").order(id: "DESC").limit(9)
-    @ext = Photo.where(camera: "7").order(id: "DESC").limit(9)
+    @canon = Photo.where(camera: "1").order(id: "DESC").limit(12)
+    @nikon = Photo.where(camera: "2").order(id: "DESC").limit(12)
+    @sony = Photo.where(camera: "3").order(id: "DESC").limit(12)
+    @fujifilm = Photo.where(camera: "4").order(id: "DESC").limit(12)
+    @pentax = Photo.where(camera: "5").order(id: "DESC").limit(12)
+    @smartphone = Photo.where(camera: "6").order(id: "DESC").limit(12)
+    @ext = Photo.where(camera: "7").order(id: "DESC").limit(12)
   end
 
   def lens
-    @hyperwide = Photo.where(lens: "1").order(id: "DESC").limit(9)
-    @wide = Photo.where(lens: "2").order(id: "DESC").limit(9)
-    @nomal = Photo.where(lens: "3").order(id: "DESC").limit(9)
-    @semitele = Photo.where(lens: "4").order(id: "DESC").limit(9)
-    @tele = Photo.where(lens: "5").order(id: "DESC").limit(9)
-    @ext = Photo.where(lens: "6").order(id: "DESC").limit(9)
+    @hyperwide = Photo.where(lens: "1").order(id: "DESC").limit(12)
+    @wide = Photo.where(lens: "2").order(id: "DESC").limit(12)
+    @nomal = Photo.where(lens: "3").order(id: "DESC").limit(12)
+    @semitele = Photo.where(lens: "4").order(id: "DESC").limit(12)
+    @tele = Photo.where(lens: "5").order(id: "DESC").limit(12)
+    @ext = Photo.where(lens: "6").order(id: "DESC").limit(12)
   end
 
   def howto
