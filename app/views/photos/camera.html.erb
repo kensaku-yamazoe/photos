@@ -37,19 +37,24 @@
 <div class="main">
 
   <div class="main-camera">
-    <div class="main-camera-index">
 
+  <%if @canon.present?%>
+    <div class="main-camera-index">
       <%= link_to "", class:"main-camera-index-text" do %>
       canonでの作例
       <% end %>
-
     </div>
       <% @canon.each do |photo| %>
         <%= link_to "/photos/#{photo.id}" do%>
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+  <% else %>
+  <span></span>
+  <% end %>
 
+
+  <%if @nikon.present?%>
     <div class="main-camera-index">
       <%= link_to "", class:"main-camera-index-text" do %>
       nikonでの作例
@@ -60,7 +65,13 @@
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+  <% else %>
+  <span></span>
+  <% end %>
 
+
+
+  <%if @sony.present?%>
     <div class="main-camera-index">
       <%= link_to "", class:"main-camera-index-text" do %>
       sonyでの作例
@@ -71,7 +82,12 @@
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+  <% else %>
+  <span></span>
+  <% end %>
 
+
+  <%if @fujifilm.present?%>
     <div class="main-camera-index">
       <%= link_to "", class:"main-camera-index-text" do %>
       fujifilmでの作例
@@ -82,7 +98,12 @@
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+  <% else %>
+  <span></span>
+  <% end %>
 
+
+  <%if @pentax.present?%>
     <div class="main-camera-index">
       <%= link_to "", class:"main-camera-index-text" do %>
       pentaxでの作例
@@ -93,7 +114,12 @@
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+  <% else %>
+  <span></span>
+  <% end %>
 
+
+  <%if @smartphone.present?%>
     <div class="main-camera-index">
       <%= link_to "", class:"main-camera-index-text" do %>
       スマホでの作例
@@ -104,7 +130,12 @@
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+  <% else %>
+  <span></span>
+  <% end %>
 
+
+  <%if @ext.present?%>
     <div class="main-camera-index">
       <%= link_to "", class:"main-camera-index-text" do %>
       その他カメラでの作例
@@ -115,6 +146,9 @@
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+  <% else %>
+  <span></span>
+  <% end %>
 
 
   </div>

@@ -34,6 +34,8 @@
 <div class="main">
   <div class="main-lens">
 
+
+  <%if @hyperwide.present?%>
     <div class="main-lens-index">
       <%= link_to "", class:"main-lens-index-text" do %>
       <i class="fas fa-ring"></i>　[~14mm]　魚眼、超広角レンズでの作例
@@ -44,8 +46,13 @@
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+  
+  <% else %>
+  <span></span>
+  <% end %>
 
 
+  <%if @wide.present?%>
     <div class="main-lens-index">
       <%= link_to "", class:"main-lens-index-text" do %>
       <i class="fas fa-ring"></i>　[16~28mm]　広角レンズでの作例
@@ -56,8 +63,13 @@
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+    
+  <% else %>
+  <span></span>
+  <% end %>
 
 
+  <%if @nomal.present?%>
     <div class="main-lens-index">
       <%= link_to "", class:"main-lens-index-text" do %>
       <i class="fas fa-ring"></i>　[35~60mm]　標準レンズでの作例
@@ -69,8 +81,13 @@
         <% end %>
       <% end %>
 
+  <% else %>
+  <span></span>
+  <% end %>
 
 
+
+  <%if @semitele.present?%>
     <div class="main-lens-index">
       <%= link_to "", class:"main-lens-index-text" do %>
       <i class="fas fa-ring"></i>　[80~100mm]　中望遠レンズでの作例
@@ -82,7 +99,12 @@
         <% end %>
       <% end %>
 
+  <% else %>
+  <span></span>
+  <% end %>
 
+
+  <%if @tele.present?%>
     <div class="main-lens-index">
       <%= link_to "", class:"main-lens-index-text" do %>
       <i class="fas fa-ring"></i>　[100mm~]　望遠レンズでの作例
@@ -94,7 +116,12 @@
         <% end %>
       <% end %>
 
+  <% else %>
+  <span></span>
+  <% end %>
 
+
+  <%if @ext.present?%>
     <div class="main-lens-index">
       <%= link_to "", class:"main-lens-index-text" do %>
       <i class="fas fa-ring"></i>　その他での作例
@@ -105,6 +132,10 @@
           <%= image_tag "#{photo.images[0].image}", class:"main-photo-index-photo2"%>
         <% end %>
       <% end %>
+
+  <% else %>
+  <span></span>
+  <% end %>
 
   </div>
 </div>
