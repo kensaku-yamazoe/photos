@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_26_130755) do
+ActiveRecord::Schema.define(version: 2019_10_31_064639) do
 
   create_table "images", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "photo_id", null: false
@@ -56,6 +56,9 @@ ActiveRecord::Schema.define(version: 2019_10_26_130755) do
     t.integer "camera", default: 0
     t.integer "lens", default: 0
     t.string "url", default: ""
+    t.string "provider"
+    t.string "uid"
+    t.string "token"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["name"], name: "index_users_on_name"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
